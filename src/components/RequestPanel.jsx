@@ -1,17 +1,17 @@
-import { useState } from 'react'
-import styles from './RequestPanel.module.css'
+import { useState } from "react";
+import styles from "./RequestPanel.module.css";
 
 export default function RequestPanel({ onFetch, loading }) {
-  const [resourceId, setResourceId] = useState('')
+  const [resourceId, setResourceId] = useState("");
 
   function handleSubmit(e) {
-    e?.preventDefault()
-    if (!resourceId.trim()) return
-    onFetch(resourceId.trim())
+    e?.preventDefault();
+    if (!resourceId.trim()) return;
+    onFetch(resourceId.trim());
   }
 
   function handleKeyDown(e) {
-    if (e.key === 'Enter') handleSubmit(e)
+    if (e.key === "Enter") handleSubmit(e);
   }
 
   return (
@@ -21,7 +21,7 @@ export default function RequestPanel({ onFetch, loading }) {
         type="text"
         placeholder="Search Pokémon by name or ID"
         value={resourceId}
-        onChange={e => setResourceId(e.target.value)}
+        onChange={(e) => setResourceId(e.target.value)}
         onKeyDown={handleKeyDown}
       />
 
@@ -37,11 +37,10 @@ export default function RequestPanel({ onFetch, loading }) {
           </>
         ) : (
           <>
-            <span className={styles.arrow}>→</span>
-            Search
+            <span className={styles.arrow}>Search</span>
           </>
         )}
       </button>
     </form>
-  )
+  );
 }
