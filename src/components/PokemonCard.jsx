@@ -369,17 +369,17 @@ export default function PokemonCard({ data }) {
           <div className={styles.statsRow}>
             <div className={styles.stat}>
               <span className={styles.statVal}>{heightM} M</span>
-              <span className={styles.statLabel}>altura</span>
+              <span className={styles.statLabel}>Height</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.stat}>
               <span className={styles.statVal}>{weightKg} KG</span>
-              <span className={styles.statLabel}>peso</span>
+              <span className={styles.statLabel}>Weight</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.stat}>
               <span className={styles.statVal}>{evolutions.length || "—"}</span>
-              <span className={styles.statLabel}>evolutions</span>
+              <span className={styles.statLabel}>Evolutions</span>
             </div>
           </div>
         </div>
